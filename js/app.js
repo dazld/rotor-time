@@ -60,7 +60,7 @@ var app = {
         $(window).bind('resize',function(){
             self.reset();
         });
-        
+
         this.reset();
     },
     reset: function(){
@@ -215,7 +215,7 @@ function bPath(startX, startY, index, cat) {
                 red         = 32 + (a.r() * 128 << 0);
                 green       = 132 + (a.r() * 32 << 0);
                 blue        = 32 + (a.r() * 32 << 0);
-                width       = a.roundNumber(a.r() * 6,2)+2;
+                width       = a.roundNumber(a.r() * 6,2)+4;
                 this.numpaths = t.getHours()+1;
                 break;
             case 'minute':
@@ -384,3 +384,6 @@ function bPath(startX, startY, index, cat) {
         return this.direction * (this.deg_to_rad(a.roundNumber( a.r()*360 / this.numpaths, 2 ))) ;
     }
 }
+
+$(app.init.bind(app));
+
